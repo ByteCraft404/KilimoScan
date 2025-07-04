@@ -69,6 +69,11 @@ def predict():
             return jsonify({'prediction': CLASS_NAMES[predicted_class_index], 'confidence': confidence})
     except Exception as e:
         return jsonify({'error': 'Error during model prediction'}), 500
+    
+@app.route('/')
+def home():
+    return 'KilimoScan is Up and Running Made with Tiffany & by your boy ByteCraft404!'
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
