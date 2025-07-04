@@ -1,9 +1,6 @@
 services:
   - type: web
-    name: kilimoscan
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py
-    envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.10
+    name: kilimoscan-backend
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
